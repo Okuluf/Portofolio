@@ -41,41 +41,16 @@ body {
     animation: float 10s infinite ease-in-out;
 }
 
-.background-animation span:nth-child(1) {
-    left: 10%;
-    animation-duration: 8s;
-}
-
-.background-animation span:nth-child(2) {
-    left: 30%;
-    animation-duration: 12s;
-}
-
-.background-animation span:nth-child(3) {
-    left: 50%;
-    animation-duration: 10s;
-}
-
-.background-animation span:nth-child(4) {
-    left: 70%;
-    animation-duration: 15s;
-}
-
-.background-animation span:nth-child(5) {
-    left: 90%;
-    animation-duration: 18s;
-}
+.background-animation span:nth-child(1) { left: 10%; animation-duration: 8s; }
+.background-animation span:nth-child(2) { left: 30%; animation-duration: 12s; }
+.background-animation span:nth-child(3) { left: 50%; animation-duration: 10s; }
+.background-animation span:nth-child(4) { left: 70%; animation-duration: 15s; }
+.background-animation span:nth-child(5) { left: 90%; animation-duration: 18s; }
 
 @keyframes float {
-    0% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-200px) scale(1.2);
-    }
-    100% {
-        transform: translateY(0) scale(1);
-    }
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-200px) scale(1.2); }
+    100% { transform: translateY(0) scale(1); }
 }
 
 /* Hero Section */
@@ -100,6 +75,7 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -144,14 +120,8 @@ body {
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* About Section */
@@ -250,14 +220,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Skills Section */
@@ -364,7 +328,6 @@ body {
 
 .navbar a {
     text-decoration: none;
-    text-decoration-style: solid;
     color: white;
     font-size: 18px;
     padding: 10px;
@@ -391,4 +354,37 @@ body {
 .navbar a:hover::before {
     width: 100%; /* Expand underline on hover */
     left: 0; /* Move underline to the left */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.5rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
 }
