@@ -63,6 +63,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
+    animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
 }
 
 .hero-title span.typed-text {
@@ -230,6 +231,8 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 .skill-list li {
@@ -241,20 +244,24 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 .skill-list li:hover {
-    transform: scale(1.1);
-    background: #ff7f50;
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background: #ff7f50; /* Change background color on hover */
 }
 
-.skill-list i {
-    color: #ff7f50;
-    transition: color 0.3s ease;
+.skill-icon {
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
+    margin-right: 0.5rem; /* Space between icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
 }
 
-.skill-list li:hover i {
-    color: white;
+.skill-list a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
 }
 
 /* Contact Form */
